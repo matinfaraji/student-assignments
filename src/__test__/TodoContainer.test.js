@@ -5,7 +5,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import App from "../App"; 
 
 describe("App component", () => {
-  it("renders a single todo item when the form is submitted once", () => {
+  it("renders a single todo", () => {
     render(<App />);
     const input = screen.getByPlaceholderText("write a todo");
     const addButton = screen.getByText("Add Todo");
@@ -17,7 +17,7 @@ describe("App component", () => {
     expect(todoItem).toBeInTheDocument();
   });
 
-  it("renders multiple todo items when the form is submitted with different todos", () => {
+  it("renders multiple todo", () => {
     render(<App />);
     const inputElement = screen.getByPlaceholderText("write a todo");
     const addButton = screen.getByText("Add Todo");
